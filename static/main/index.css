@@ -1,0 +1,110 @@
+body {
+     background: linear-gradient(210deg, #93a9d4, #36393e);
+}
+
+#links::after {
+    width: 150px;
+    height: 1px
+}
+
+#other-places a {
+    margin-right: 3px;
+    margin-left: 3px
+}
+
+.fa-github:hover {
+    color: #333 !important;
+}
+
+.fa-gitlab:hover {
+    color: #fC6D26 !important;
+}
+
+.fa-paper-plane:hover {
+	color: #00BCD4 !important;
+}
+
+.fa-keybase:hover {
+    color: #F96C2A !important;
+}
+
+.title-area {
+  background: transparent !important;
+  margin-left: 150px;
+  -webkit-animation: moveRightToLeft 2s ease-out;
+  -moz-animation: moveRightToLeft 2s ease-out;
+  -ms-animation: moveRightToLeft 2s ease-out;
+  animation: moveRightToLeft 2s ease-out;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.circle {
+  margin-left: -150px;
+  border-radius: 250px;
+  box-sizing: border-box;
+  background-color: #DDD;
+  border: 5px solid #cfd8dc;
+  height: 250px;
+  width: 250px;
+  -webkit-animation: spin 2s ease-out, moveLeftToRight 2s ease-out;
+  -moz-animation: spin 2s ease-out, moveLeftToRight 2s ease-out;
+  -ms-animation: spin 2s ease-out, moveLeftToRight 2s ease-out;
+  animation: spin 2s ease-out, moveLeftToRight 2s ease-out;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from { -ms-transform: translate(-50%, -50%) rotate(180deg); }
+  to { -ms-transform: translate(-50%, -50%) rotate(0deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: translate(-50%, -50%) rotate(180deg); }
+  to { -moz-transform: translate(-50%, -50%) rotate(0deg); }
+}
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(180deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: translate(-50%, -50%) rotate(180deg); }
+  to { -webkit-transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: -150px; opacity: 1; }
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: -150px; opacity: 1; }
+}
+@keyframes moveLeftToRight {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: -150px; opacity: 1; }
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: -150px; opacity: 1; }
+}
+
+/* Move title from right to left */
+@-moz-keyframes moveRightToLeft {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: 150px; opacity: 1; }
+}
+@-ms-keyframes moveRightToLeft {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: 150px; opacity: 1; }
+}
+@keyframes moveRightToLeft {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: 150px; opacity: 1; }
+}
+@-webkit-keyframes moveRightToLeft {
+  0%   { margin-left: 0; opacity: 0; }
+  100% { margin-left: 150px; opacity: 1; }
+}
