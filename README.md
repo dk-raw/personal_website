@@ -1,4 +1,5 @@
-# personal_website
-My personal website project (url comming soon)
-This is my personal website. If you would like to test it, just download the repository and run the first index.html file with any browser.
-All the code is mine and it's written in html, css and a bit of JavaScript
+# My own website now hosted on the web!
+
+### Want to find out more about me? Want to contact me or add me on a social network? Want to listen to a song? Just visit my **[website](https://dk-raw.github.io/personal_website/)**! 
+> Writen in HTML, CSS and a little bit of JavaScript! 
+
