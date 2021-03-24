@@ -42,4 +42,3 @@ $(document).ready(function () {
 ```HTML
 <img id="avatar" class="center circle" src="" alt="just my GitHub avatar">
 ```
-```
