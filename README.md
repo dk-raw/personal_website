@@ -12,7 +12,8 @@ _this website was created as a means of promoting myself and providing info abou
 **- The index file of the website is dynamically displaying my GitHub avatar through Ajax** <br/>
 **- The website is now defaulting to dark mode** <br/>
 **- Removed the `Play a song` page** <br/>
-**- Removed music in the background of the snek game**
+**- Removed music in the background of the snek game** <br/>
+**- Changed the favicon to something more modern and simplystic**
 
 <hr/>
 
