@@ -44,7 +44,7 @@ body {
   border-radius: 250px;
   box-sizing: border-box;
   background-color: #DDD;
-  border: 5px solid #cfd8dc;
+  border: 5px solid #555555;
   height: 250px;
   width: 250px;
   -webkit-animation: spin 2s ease-out, moveLeftToRight 2s ease-out;
