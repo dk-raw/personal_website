@@ -1,5 +1,7 @@
 # My personal website
 
+![Perfekt score!](https://user-images.githubusercontent.com/68110106/112374070-5585cc80-8cea-11eb-90e0-673b02090266.png)
+
 _this website was created as a means of promoting myself and providing info about me_
 
 [**Domain**](https://dkatsios.ml)
