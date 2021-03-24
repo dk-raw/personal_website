@@ -5,8 +5,10 @@ _this website was created as a means of promoting myself and providing info abou
 <hr/>
 
 ### Recents:
-**- The index file of the website is now a dynamic one since it gets my GitHub avatar and displays it with jQuery Ajax and JSON** <br/>
-**- The website is now defaulting to dark mode**
+**- The index file of the website is dynamically displaying my GitHub avatar through Ajax** <br/>
+**- The website is now defaulting to dark mode** <br/>
+**- Removed the `Play a song` page** <br/>
+**- Removed music in the background of the snek game**
 
 <hr/>
 
