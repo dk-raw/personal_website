@@ -4,7 +4,7 @@
 
 _this website was created as a means of promoting myself and providing info about me_
 
-[**Domain**](https://dkatsios.ml)
+[**dkatsios.ml**](https://dkatsios.ml)
 
 <hr/>
 
