@@ -13,7 +13,8 @@ _this website was created as a means of promoting myself and providing info abou
 **- The website is now defaulting to dark mode** <br/>
 **- Removed the `Play a song` page** <br/>
 **- Removed music in the background of the snek game** <br/>
-**- Changed the favicon to something more modern and simplystic**
+**- Changed the favicon to something more modern and simplystic** <br />
+**- Added my PGP key** <br />
 
 <hr/>
 
