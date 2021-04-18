@@ -29,7 +29,8 @@
             <a><b>Personal projects:</b></a> <br />
             <a>Doge House, Very Movie, Liquid Geometry</a> <br />
             <a><b>Your IP address?:</b></a> <br />
-            <a id="ip"></a>
+            <a id="ip"></a> <br />
+            <a>I have never been to <span id="country"></span></a>        
             <!-- the curiosity killed the cat you know... -->
         </div>
         <div id="other-places">
@@ -39,7 +40,9 @@
     <script>
         $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
             console.log(data.ip_address);
+            console.log(data.city);
             $("#ip").text(data.ip_address);
+            $("#country").text(data.city);
         })
     </script>
 </body>
