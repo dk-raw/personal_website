@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <title>About Damian</title>
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Damian's site">
-        <meta name="twitter:description" content="About Damian">
-	<meta name="Description" content="About Damian">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="../static/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:200,400,800">
-	<link rel="stylesheet" type="text/css" href=../static/main/main.css>
-	<link rel="stylesheet" type="text/css" href=../static/main/index.css>
-	</head>
-	<body>
-        <div class="center  ">
-            <h1 class="main-title bottom-line">
-
-                <span class="thin">About</span> Me
-
-            </h1>
+    <meta charset="UTF-8">
+    <title>About Damian</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Damian's site">
+    <meta name="twitter:description" content="About Damian">
+    <meta name="Description" content="About Damian">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:200,400,800">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href=../static/main/main.css>
+    <link rel="stylesheet" type="text/css" href=../static/main/index.css>
+</head>
+<body>
+    <div class="center  ">
+        <h1 class="main-title bottom-line">
+            <span class="thin">About</span> Me
+        </h1>
         <div id="links" class="bottom-line">
-
             <a>Hello World! My name is Damian. I am a proud Arch \ Kali Linux user and Web Developer. You were probably expecting this to be a bit longer, but unfortunately, I'm not that interesting as a person. I am also studying for the CCNA and PenTest+ certs</a>
-		<br/>
-		<a><b>Technologies:</b></a> <br/>
-		<a>ASP.NET MVC, C#, JavaScript(Vanilla, JQuery, React), Bootstrap, SQL, HTML, CSS, GitHub, Visual Studio / Code</a> <br/>
-		<a><b>Learning:</b></a> <br/>
-		<a>TypeScript</a> <br/>
-		<a><b>Personal projects:</b></a> <br/>
-		<a>Doge House, Very Movie, Liquid Geometry</a>
-		<!-- the curiosity killed the cat you know... -->
-		</div>
+            <br />
+            <a><b>Technologies:</b></a> <br />
+            <a>ASP.NET MVC, C#, JavaScript(Vanilla, JQuery, React), Bootstrap, SQL, HTML, CSS, GitHub, Visual Studio / Code</a> <br />
+            <a><b>Learning:</b></a> <br />
+            <a>TypeScript</a> <br />
+            <a><b>Personal projects:</b></a> <br />
+            <a>Doge House, Very Movie, Liquid Geometry</a>
+            <a><b>Your IP address?:</b></a> <br />
+            <a id="ip"></a>
+            <!-- the curiosity killed the cat you know... -->
+        </div>
         <div id="other-places">
-
             <a href="https://dkatsios.ml"><b>return to home page</b></a>
-
         </div>
     </div>
+    <script>
+        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
+            console.log(data.ip_address);
+            $("#ip").text(data.ip_address);
+        })
+    </script>
 </body>
 </html>
