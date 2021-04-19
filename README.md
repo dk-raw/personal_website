@@ -50,3 +50,7 @@ $(document).ready(function () {
 ```HTML
 <img id="avatar" class="center circle" src="" alt="just my GitHub avatar">
 ```
+
+____
+## IMPORTANT NOTICE:
+**I TAKE ABSOLUTELY NO RESPONSIBILITY FOR ANY LEAKAGE OF THE IP ADDRESS OR LOCATION.**
