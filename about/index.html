@@ -23,9 +23,7 @@
             <a>Hello World! My name is Damian. I am a proud Arch \ Kali Linux user and Web Developer. You were probably expecting this to be a bit longer, but unfortunately, I'm not that interesting as a person. I am also studying for the CCNA and PenTest+ certs</a>
             <br />
             <a><b>Technologies:</b></a> <br />
-            <a>ASP.NET MVC, C#, JavaScript(Vanilla, JQuery, React), Bootstrap, SQL, HTML, CSS, GitHub, Visual Studio / Code</a> <br />
-            <a><b>Learning:</b></a> <br />
-            <a>TypeScript</a> <br />
+            <a>ASP.NET MVC, C#, JavaScript(Vanilla, jQuery, React.js, TypeScript), Bootstrap, SQL, HTML, CSS, GitHub, Visual Studio / Code</a> <br />
             <a><b>Personal projects:</b></a> <br />
             <a>Doge House, Very Movie, Liquid Geometry</a> <br />
             <a><b>Your IP address?</b></a> <br />
@@ -44,13 +42,11 @@
         $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=e3bc23053c584ae2bbf332d89bc66f8d", function (data) {
             console.log(data.ip_address);
             console.log(data.city);
-            var city = data.city;
-            $("#ip").text(data.ip_address);
-            if (city == null) {
-                $("#all").text("nice try buddy...");
+            if (data.security.is_vpn == true) {
+                $("#ip").text("Good Old VPN...");
             }
             else {
-                $("#country").text(data.city);
+                $("#ip").text(data.ip_address);
             }
         })
     </script>
