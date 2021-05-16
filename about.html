@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About Damian">
+    <meta name="twitter:description" content="This is my personal website">
+    <meta name="Description" content="Damian's personal website">
+    <meta name="twitter:image" content="">
+    <title>Damian - About</title>
+    <!-- STYLES -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- SCRIPTS -->
+    <!-- ANALYTICS -->
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item text-warning"><a href="index.html"><u>$Home</u></a></li>
+            <li class="breadcrumb-item current" aria-current="page">About</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <h1 class="display-4">About Me</h1>
+        <p class="lead">
+            Hello World! My name is Damian. I am a C# developer and Arch Linux user.
+            You were probably expecting this to be a bit longer, but unfortunately,
+            I'm not that interesting as a person.
+        </p>
+        <hr />
+        <div class="row" id="more">
+            <div class="col-md-4">
+                <h2><i class="bi bi-gear"></i> Technologies</h2>
+                <ul>
+                    <li>C#</li>
+                    <li>ASP.NET</li>
+                    <ul>
+                        <li>MVC</li>
+                        <li>Core</li>
+                    </ul>
+                    <li>SQL</li>
+                    <ul>
+                        <li>Entity</li>
+                    </ul>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <ul>
+                        <li>Vanilla</li>
+                        <li>jQuery</li>
+                        <li>React.js</li>
+                        <li>TypeScript</li>
+                    </ul>
+                    <li>CSS</li>
+                    <ul>
+                        <li>Bootstrap 4</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                    <li>HTML</li>
+                    <li>Visual Studio</li>
+                    <ul>
+                        <li>2019</li>
+                        <li>Code</li>
+                        <li>Git</li>
+                    </ul>
+                    <li>Linux</li>
+                    <ul>
+                        <li>Arch</li>
+                        <li>Ubuntu</li>
+                        <li>Rasbian</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2><i class="bi bi-kanban"></i> Projects</h2>
+                <ul>
+                    <li>DogeHouse</li>
+                    <li>Very Movie</li>
+                    <li>Liquid Geometry</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2><i class="bi bi-bookmark"></i> Repos</h2>
+                <ul>
+                    <li id="projects"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <footer>
+                <hr />
+                <p>&copy; 2021 - dkatsios.ml</p>
+            </footer>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "https://api.github.com/users/dk-raw/repos",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+                $.each(response, function (index, repo) {
+                    if (repo.fork == false) {
+                        if (repo.description == null) {
+                            $("#projects").append(`
+                                    <li><a href="${repo.html_url}" class="repo-link" target="_blank"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
+                                `);
+                        }
+                        else {
+                            $("#projects").append(`
+                                    <li><a href="${repo.html_url}" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
+                                `);
+                        }
+                    }
+
+                });
+            }
+        });
+    </script>
+    <script>
+        $("#search-submit").click(function (e) {
+            e.preventDefault();
+            const input = $("#search").val();
+            location.replace(`${input}`);
+        });
+    </script>
+</body>
+</html>

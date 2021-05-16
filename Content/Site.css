@@ -1,0 +1,58 @@
+﻿::selection {
+    background-color: white !important;
+    color: black !important;
+}
+body {
+    /*font-family: 'Raleway', sans-serif;*/
+    background-color: #222222;
+    color: white;
+}
+.container {
+    margin-top: 20px;
+}
+hr {
+    border: 2px solid var(--danger) !important;
+    border-radius: 3px !important;
+}
+.col-md-4 {
+    margin-bottom: 20px !important;
+}
+.jumbotron {
+    background-color: #484848 !important;
+}
+.repo-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+.breadcrumb {
+    font-size: large;
+    background-color: #343A40 !important;
+    margin: 7px !important;
+}
+@media screen and (max-width: 1000px) {
+    .breadcrumb {
+        font-size: larger;
+    }
+}
+.breadcrumb a {
+    color: var(--warning) !important;
+    transition: 0.2s;
+}
+    .breadcrumb a:hover {
+        color: #CC9A05 !important;
+        transition: 0.2s;
+    }
+.current {
+    color: white !important;
+    cursor: default;
+    transition: 0.2s;
+}
+    .current:hover {
+        color: #6C757D !important;
+        transition: 0.2s;
+    }
+#gc {
+    background-color: #222222 !important;
+    border: 2px solid var(--danger);
+    border-radius: 3px !important;
+}
