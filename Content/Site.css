@@ -55,4 +55,5 @@ hr {
     background-color: #222222 !important;
     border: 2px solid var(--danger);
     border-radius: 3px !important;
+    cursor: none !important;
 }
