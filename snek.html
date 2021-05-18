@@ -33,7 +33,7 @@
         <p class="lead">Use the <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> <i class="far fa-caret-square-left"></i> keys</p>
         <hr class="bg-danger" />
         <canvas id="gc" width="400" height="400"></canvas> <br />
-        <button class="btn btn-outline-danger" style="width: 404px;" id="refresh">Restart Game</button>
+        <button class="btn btn-outline-danger" style="width: 404px;" id="refresh">Restart Game <i class="bi bi-arrow-clockwise"></i></button>
     </div>
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -45,15 +45,11 @@
             ctx = canv.getContext("2d");
             document.addEventListener("keydown", keyPush);
             setInterval(game, 1000 / 15);
-            $("#refresh").click(function (e) { 
-                e.preventDefault();
-                location.reload();
-            });
-        
+        });
         if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             $("body").append(`
                 <div class="container">
-                    <b class="text-warning">snek is not available for your device.</b>
+                    <b class="text-warning">R.I.P: Snek is not yet available for your device <i class="far fa-sad-tear"></i></b>
                 </div>
             `);
         }
@@ -117,12 +113,15 @@
                 }
             }
         }
-    });
     </script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
+        $("#refresh").click(function (e) { 
+                e.preventDefault();
+                location.reload();
+            });
     </script>
 </body>
 </html>
