@@ -109,7 +109,7 @@
             success: function (response) {
                 console.log(response);
                 $.each(response, function (index, repo) {
-                    if (repo.fork == false) {
+                    if (!repo.fork) {
                         if (repo.description == null) {
                             $("#projects").append(`
                                     <li><a href="${repo.html_url}" class="repo-link" target="_blank"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
@@ -121,7 +121,6 @@
                                 `);
                         }
                     }
-
                 });
             }
         });
