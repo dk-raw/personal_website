@@ -24,7 +24,7 @@
 <body>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item text-warning"><a href="index.html"><u>$Home</u></a></li>
+            <li class="breadcrumb-item text-warning"><a href="index.html"><u>Home</u></a></li>
             <li class="breadcrumb-item current" aria-current="page">Contact</li>
         </ol>
     </nav>
@@ -34,66 +34,57 @@
         <div class="row">
             <div class="col-md-4">
                 <h3>GitHub</h3>
-                <p>My public codebase</p>
                 <form action="https://github.com/dk-raw" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="bi bi-github"></i> GitHub</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>Email</h3>
-                <p>My public email</p>
                 <form action="mailto:hello@dkatsios.tk" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="bi bi-envelope"></i> Email</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>Twitter</h3>
-                <p>Do not expect a lot of posts here</p>
                 <form action="https://twitter.com/damik_raw" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="bi bi-twitter"></i> Twitter</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>Discord</h3>
-                <p>My Discord server(once again, nothing much)</p>
                 <form action="https://discord.com/invite/VwvQNYzU5M" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="bi bi-discord"></i> Discord</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>DogeHouse</h3>
-                <p>To the moon!🚀</p>
                 <form action="https://dogehouse.tv/u/damian" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="fas fa-dog"></i> DogeHouse</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>Steam</h3>
-                <p>My public Steam account. I don't play that much lately</p>
                 <form action="https://steamcommunity.com/id/dkraw/" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="fab fa-steam"></i> Steam</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>YouTube</h3>
-                <p>i aM a yOuTUbEr¡</p>
                 <button class="btn btn-outline-light btn-lg" id="beans"><i class="bi bi-youtube"></i> YouTube</button>
             </div>
             <div class="col-md-4">
                 <h3>GitLab</h3>
-                <p>I don't know why I have an account on GitLab</p>
                 <form action="https://gitlab.com/dk.raw" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="fab fa-gitlab"></i> GitLab</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <h3>Legal</h3>
-                <p>Please use this emai adresse <u>only for legal matters regarding myself</u></p>
                 <form action="mailto:business@dkatsios.tk" target="_blank">
                     <button class="btn btn-outline-light btn-lg"><i class="fas fa-gavel"></i> Email</button>
                 </form>
             </div>
-            <p class="text-warning">I do not run any other social media account other than some private ones. Report any fake impersonating account.</p>
+            <p class="text-warning">Please trust sources signed with my <u>PGP key only!</u></p>
         </div>
     </div>
     <script src="Scripts/jquery-3.6.0.min.js"></script>
@@ -105,6 +96,7 @@
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })
+            //rickroll code because youtube links do not work well with forms
             $("#beans").click(function (e) {
                 e.preventDefault();
                 location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ');

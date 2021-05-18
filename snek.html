@@ -24,7 +24,7 @@
 <body>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item text-warning"><a href="index.html"><u>$Home</u></a></li>
+            <li class="breadcrumb-item text-warning"><a href="index.html"><u>Home</u></a></li>
             <li class="breadcrumb-item current" aria-current="page">Snek</li>
         </ol>
     </nav>
@@ -33,7 +33,7 @@
         <p class="lead">Use the <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> <i class="far fa-caret-square-left"></i> keys</p>
         <hr class="bg-danger" />
         <canvas id="gc" width="400" height="400"></canvas> <br />
-        <button class="btn btn-outline-danger" style="width: 404px;">Restart Game</button>
+        <button class="btn btn-outline-danger" style="width: 404px;" id="refresh">Restart Game</button>
     </div>
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -45,7 +45,11 @@
             ctx = canv.getContext("2d");
             document.addEventListener("keydown", keyPush);
             setInterval(game, 1000 / 15);
-        });
+            $("#refresh").click(function (e) { 
+                e.preventDefault();
+                location.reload();
+            });
+        
         if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             $("body").append(`
                 <div class="container">
@@ -113,6 +117,7 @@
                 }
             }
         }
+    });
     </script>
     <script>
         $(function () {
