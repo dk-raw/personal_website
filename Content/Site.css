@@ -9,6 +9,7 @@ body {
 }
 .container {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 hr {
     border: 2px solid var(--danger) !important;
