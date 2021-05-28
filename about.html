@@ -116,6 +116,7 @@
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
     <script>
+        //please do not abuse the token lol
         $.ajax({
             type: "GET",
             url: "https://api.github.com/users/dk-raw/repos",
@@ -123,30 +124,45 @@
             dataType: "json",
             data:{
                 client_id:'3698855baa38f66d739d',
-                client_secret:'6a47dd38e39f70eec8e1f122ad1349898810e063'
+                client_secret:'84ac2b19642fdbdd434a04ea1c70227ef91affa0'
             },
             beforeSend: function(){
                 $('.spinner').show();
             },
             success: function (response) {
+                console.log(response)
                 console.log(`success on loading data thorugh ajax.`);
                 $.each(response, function (index, repo) {
                     if (!repo.fork) {
+                        if (!repo.archived) {
+                            if (repo.description == null) {
+                            $("#repo").append(`
+                                    <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank"><i class="bi bi-arrow-return-right"></i><u> ${repo.name}</u></a></li>
+                            `);
+                            }
+                            else {
+                            $("#repo").append(`
+                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><i class="bi bi-arrow-return-right"></i><u> ${repo.name}</u></a></li>
+                            `);
+                            }
+                        }
+                        else {
                         if (repo.description == null) {
                             $("#repo").append(`
-                                    <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
-                                `);
+                                    <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" title="archived" target="_blank"><i class="bi bi-archive"></i><u> ${repo.name}</u></a></li>
+                            `);
                         }
                         else {
                             $("#repo").append(`
-                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
+                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description} (archived)"><i class="bi bi-archive"></i><u> ${repo.name}</u></a></li>
                             `);
                         }
+                    }
                     }
                 });
             },
             error: function (request, status, error) {
-                $(".repos").append(`<p class="lead text-danger">Error ${request.status}. See console errors for more info</p>`);
+                $(".repos").html(`<p class="lead text-danger">Error ${request.status}. See console errors for more info</p>`);
                 console.error(request.responseText);
             },
             complete: function(){
