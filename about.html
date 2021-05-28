@@ -32,7 +32,7 @@
 <body>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item text-warning"><a href="index.html"><u>Home</u></a></li>
+            <li class="breadcrumb-item text-warning">$<a href="index.html"><u>Home</u></a></li>
             <li class="breadcrumb-item current" aria-current="page">About</li>
         </ol>
     </nav>
@@ -58,6 +58,7 @@
                     <ul>
                         <li>Entity</li>
                     </ul>
+                    <li>C++</li>
                     <li>JavaScript</li>
                     <ul>
                         <li>Vanilla</li>
@@ -87,15 +88,19 @@
             <div class="col-md-4">
                 <h2><i class="bi bi-kanban"></i> Projects</h2>
                 <ul>
-                    <li>DogeHouse</li>
+                    <li>DogeHouse(<i class="far fa-sad-tear"></i>dead)</li>
                     <li>Very Movie</li>
                     <li>Liquid Geometry</li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h2><i class="bi bi-bookmark"></i> Repos</h2>
-                <ul>
-                    <li id="projects"></li>
+                <h2><i class="bi bi-bookmarks"></i> Repos</h2>
+                <p class="repos"></p>
+                <div class="spinner-border text-danger spinner" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <ul id="repo">
+
                 </ul>
             </div>
         </div>
@@ -114,24 +119,39 @@
         $.ajax({
             type: "GET",
             url: "https://api.github.com/users/dk-raw/repos",
+            cache: false,
             dataType: "json",
+            data:{
+                client_id:'3698855baa38f66d739d',
+                client_secret:'6a47dd38e39f70eec8e1f122ad1349898810e063'
+            },
+            beforeSend: function(){
+                $('.spinner').show();
+            },
             success: function (response) {
-                console.log(response);
+                console.log(`success on loading data thorugh ajax.`);
                 $.each(response, function (index, repo) {
                     if (!repo.fork) {
                         if (repo.description == null) {
-                            $("#projects").append(`
-                                    <li><a href="${repo.html_url}" class="repo-link" target="_blank"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
+                            $("#repo").append(`
+                                    <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
                                 `);
                         }
                         else {
-                            $("#projects").append(`
-                                    <li><a href="${repo.html_url}" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
+                            $("#repo").append(`
+                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><u><i class="bi bi-arrow-return-right"></i> ${repo.name}</u></a></li>
                             `);
                         }
                     }
                 });
-            }
+            },
+            error: function (request, status, error) {
+                $(".repos").append(`<p class="lead text-danger">Error ${request.status}. See console errors for more info</p>`);
+                console.error(request.responseText);
+            },
+            complete: function(){
+            $('.spinner').hide();
+      }
         });
     </script>
     <script>
