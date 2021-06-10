@@ -124,7 +124,7 @@
             beforeSend: () => {
                 $('.spinner').show();
             },
-            success: function (response) {
+            success: (response) => {
                 console.log(response)
                 console.log(`success on loading data thorugh ajax.`);
                 $.each(response, (index, repo) => {
