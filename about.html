@@ -78,12 +78,6 @@
                         <li>Code</li>
                         <li>Git</li>
                     </ul>
-                    <li>Linux</li>
-                    <ul>
-                        <li>Arch</li>
-                        <li>Ubuntu</li>
-                        <li>Rasbian</li>
-                    </ul>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -91,7 +85,7 @@
                 <ul>
                     <li>DogeHouse(<i class="far fa-sad-tear"></i>dead)</li>
                     <li>Very Movie</li>
-                    <li>Liquid Geometry</li>
+                    <li>MathFlare</li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -117,7 +111,7 @@
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
     <script>
-        //please do not abuse the token lol
+        //please do not abuse the github token lol
         $.ajax({
             type: "GET",
             url: "https://api.github.com/users/dk-raw/repos",
@@ -127,13 +121,13 @@
                 client_id:'3698855baa38f66d739d',
                 client_secret:'84ac2b19642fdbdd434a04ea1c70227ef91affa0'
             },
-            beforeSend: function(){
+            beforeSend: () => {
                 $('.spinner').show();
             },
             success: function (response) {
                 console.log(response)
                 console.log(`success on loading data thorugh ajax.`);
-                $.each(response, function (index, repo) {
+                $.each(response, (index, repo) => {
                     if (!repo.fork) {
                         if (!repo.archived) {
                             if (repo.description == null) {
@@ -162,17 +156,17 @@
                     }
                 });
             },
-            error: function (request, status, error) {
-                $(".repos").html(`<p class="lead text-danger">Error ${request.status}. See console errors for more info</p>`);
+            error: (request, status, error) => {
+                $(".repos").html(`<p class="lead text-danger">Error ${request.status}. See console for more info</p>`);
                 console.error(request.responseText);
             },
-            complete: function(){
+            complete: () => {
             $('.spinner').hide();
-      }
+        }
         });
     </script>
     <script>
-        $("#search-submit").click(function (e) {
+        $("#search-submit").click((e) => {
             e.preventDefault();
             const input = $("#search").val();
             location.replace(`${input}`);
