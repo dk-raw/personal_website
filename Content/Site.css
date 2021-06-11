@@ -15,12 +15,6 @@ hr {
     border: 2px solid var(--danger) !important;
     border-radius: 3px !important;
 }
-.col-md-4 {
-    margin-bottom: 20px !important;
-}
-.jumbotron {
-    background-color: #484848 !important;
-}
 .repo-link {
     color: white !important;
     text-decoration: none !important;

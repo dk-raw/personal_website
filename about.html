@@ -45,7 +45,7 @@
         </p>
         <hr />
         <div class="row" id="more">
-            <div class="col-md-4">
+            <div class="col-lg">
                 <h2><i class="bi bi-gear"></i> Technologies</h2>
                 <ul>
                     <li>C#</li>
@@ -80,29 +80,27 @@
                     </ul>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg">
                 <h2><i class="bi bi-kanban"></i> Projects</h2>
                 <ul>
-                    <li>DogeHouse(<i class="far fa-sad-tear"></i>dead)</li>
                     <li>Very Movie</li>
                     <li>MathFlare</li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg">
                 <h2><i class="bi bi-bookmarks"></i> Repos</h2>
                 <p class="repos"></p>
                 <div class="spinner-border text-danger spinner" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
                 <ul id="repo">
-
                 </ul>
             </div>
         </div>
         <div class="container">
             <footer>
                 <hr />
-                <p>&copy;2021 dkatsios.ml  - All rights reserved. - Proudly hosted and protected by  <i class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
+                <p>&copy;<span id="year"></span> dkatsios.ml  - All rights reserved. - Proudly hosted and protected by  <i class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
             </footer>
         </div>
     </div>
@@ -166,10 +164,8 @@
         });
     </script>
     <script>
-        $("#search-submit").click((e) => {
-            e.preventDefault();
-            const input = $("#search").val();
-            location.replace(`${input}`);
+        $(document).ready(() => {
+            $("#year").html(`${new Date().getFullYear()}`);
         });
     </script>
 </body>
