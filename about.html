@@ -1,172 +1,241 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <!-- SEO -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About Damian">
-    <meta name="twitter:description" content="This is my personal website">
-    <meta name="Description" content="Damian's personal website">
-    <meta name="twitter:image" content="Content/512.png">
-    <title>Damian - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Damian's website" />
+    <meta name="twitter:description" content="This is my personal website" />
+    <meta name="Description" content="Damian's personal website" />
+    <meta name="twitter:image" content="Content/512.png" />
+    <title>About Damian</title>
     <!-- STYLES -->
-    <link rel="icon" type="image/png" href="Content/favicon.ico">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
-    <link href="Content/Site.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!-- SCRIPTS -->
+    <link rel="icon" type="image/png" href="Content/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <script src="https://kit.fontawesome.com/4db79696e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Styles/Site.css" />
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <!-- ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4QKE5KRE8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Y4QKE5KRE8');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-Y4QKE5KRE8");
     </script>
 </head>
+
 <body>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item text-warning">$<a href="index.html"><u>Home</u></a></li>
-            <li class="breadcrumb-item current" aria-current="page">About</li>
-        </ol>
-    </nav>
-    <div class="container">
-        <h1 class="display-4">About Me</h1>
-        <p class="lead">
-            Hello World! My name is Damian. I am a C# developer and Arch Linux user.
-            You were probably expecting this to be a bit longer, but unfortunately,
-            I'm not that interesting as a person.
-        </p>
-        <hr />
-        <div class="row" id="more">
-            <div class="col-lg">
-                <h2><i class="bi bi-gear"></i> Technologies</h2>
-                <ul>
-                    <li>C#</li>
-                    <li>ASP.NET</li>
-                    <ul>
-                        <li>MVC</li>
-                        <li>Core</li>
-                    </ul>
-                    <li>SQL</li>
-                    <ul>
-                        <li>Entity</li>
-                    </ul>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                    <ul>
-                        <li>Vanilla</li>
-                        <li>jQuery</li>
-                        <li>Node.js</li>
-                        <li>React.js</li>
-                        <li>TypeScript</li>
-                    </ul>
-                    <li>CSS</li>
-                    <ul>
-                        <li>Bootstrap</li>
-                    </ul>
-                    <li>HTML</li>
-                    <li>Visual Studio</li>
-                    <ul>
-                        <li>2019</li>
-                        <li>Code</li>
-                        <li>Git</li>
-                    </ul>
-                </ul>
-            </div>
-            <div class="col-lg">
-                <h2><i class="bi bi-kanban"></i> Projects</h2>
-                <ul>
-                    <li>Very Movie</li>
-                    <li>MathFlare</li>
-                </ul>
-            </div>
-            <div class="col-lg">
-                <h2><i class="bi bi-bookmarks"></i> Repos</h2>
-                <p class="repos"></p>
-                <div class="spinner-border text-danger spinner" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <ul id="repo">
-                </ul>
-            </div>
+    <div class="container-sm">
+        <div class="d-inline-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Menu">
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
-        <div class="container">
+        <br />
+        <br />
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+        </nav>
+        <div>
+            <div class="row">
+                <div class="col-lg">
+                    <h1 class="display-4">About Me</h1>
+                    <p class="lead">
+                        Hello World! My name is Damian. I am a C# developer residing in Athens.
+                        You were probably expecting this to be a bit longer, but unfortunately,
+                        I'm not that interesting as a person.
+                    </p>
+                </div>
+                <div class="col-lg">
+                    <div id='map' class="rounded" style='width: 100%; height: 30em'></div>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <div class="row" id="more">
+                <div class="col-lg">
+                    <h2><i class="bi bi-gear"></i> Technologies</h2>
+                    <ul>
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>ASP.NET</li>
+                        <ul>
+                            <li>MVC</li>
+                            <li>Core</li>
+                        </ul>
+                        <li>WebAssembly</li>
+                        <ul>
+                            <li>C#</li>
+                        </ul>
+                        <li>Blazor</li>
+                        <ul>
+                            <li>Server</li>
+                        </ul>
+                        <li>SQL</li>
+                        <ul>
+                            <li>Entity</li>
+                        </ul>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <ul>
+                            <li>Vanilla</li>
+                            <li>jQuery</li>
+                            <li>Node.js</li>
+                            <li>React.js</li>
+                        </ul>
+                        <li>CSS</li>
+                        <ul>
+                            <li>Bootstrap 5</li>
+                        </ul>
+                        <li>HTML</li>
+                        <li>Visual Studio</li>
+                        <ul>
+                            <li>2019</li>
+                            <li>Code</li>
+                        </ul>
+                        <li>GitHub</li>
+                        <ul>
+                            <li>Git</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg">
+                    <h2><i class="bi bi-kanban"></i> Projects</h2>
+                    <ul>
+                        <li>Very Movie</li>
+                        <li>MathFlare</li>
+                    </ul>
+                </div>
+                <div class="col-lg">
+                    <h2><i class="bi bi-bookmarks"></i> Repos</h2>
+                    <p class="repos"></p>
+                    <div class="spinner-border text-danger spinner" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <ul id="repo">
+                    </ul>
+                </div>
+            </div>
             <footer>
                 <hr />
-                <p>&copy;<span id="year"></span> dkatsios.ml  - All rights reserved. - Proudly hosted and protected by  <i class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
+                <p>&copy;<span id="year"></span> dkatsios.ml - All rights reserved. - Proudly hosted and protected by <i
+                        class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
             </footer>
         </div>
-    </div>
-    <script src="Scripts/jquery-3.6.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
-    <script>
-        //please do not abuse the github token lol
-        $.ajax({
-            type: "GET",
-            url: "https://api.github.com/users/dk-raw/repos",
-            cache: false,
-            dataType: "json",
-            data:{
-                client_id:'3698855baa38f66d739d',
-                client_secret:'84ac2b19642fdbdd434a04ea1c70227ef91affa0'
-            },
-            beforeSend: () => {
-                $('.spinner').show();
-            },
-            success: (response) => {
-                console.log(response)
-                console.log(`success on loading data thorugh ajax.`);
-                $.each(response, (index, repo) => {
-                    if (!repo.fork) {
-                        if (!repo.archived) {
-                            if (repo.description == null) {
-                            $("#repo").append(`
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <a href="index.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-house"></i> Home</a>
+                    <a href="about.html" class="btn btn-light d-block my-2"><i class="bi bi-credit-card-2-front"></i> About</a>
+                    <a href="contact.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-telephone"></i> Contact</a>
+                    <a href="snek.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-joystick"></i> Play Snek</a>
+                    <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i> Domains</a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+        <script>
+            //please do not abuse the github token lol
+            $.ajax({
+                type: "GET",
+                url: "https://api.github.com/users/dk-raw/repos",
+                cache: false,
+                dataType: "json",
+                data: {
+                    client_id: '3698855baa38f66d739d',
+                    client_secret: '84ac2b19642fdbdd434a04ea1c70227ef91affa0'
+                },
+                beforeSend: () => {
+                    $('.spinner').show();
+                },
+                success: (response) => {
+                    console.log(response)
+                    console.log(`success on loading data thorugh ajax.`);
+                    $.each(response, (index, repo) => {
+                        if (!repo.fork) {
+                            if (!repo.archived) {
+                                if (repo.description == null) {
+                                    $("#repo").append(`
                                     <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank"><i class="bi bi-arrow-return-right"></i><u> ${repo.name}</u></a></li>
                             `);
+                                }
+                                else {
+                                    $("#repo").append(`
+                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-bs-toggle="tooltip" data-bs-placement="right" title="${repo.description}"><i class="bi bi-arrow-return-right"></i><u> ${repo.name}</u></a></li>
+                            `);
+                                }
                             }
                             else {
-                            $("#repo").append(`
-                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description}"><i class="bi bi-arrow-return-right"></i><u> ${repo.name}</u></a></li>
-                            `);
-                            }
-                        }
-                        else {
-                        if (repo.description == null) {
-                            $("#repo").append(`
+                                if (repo.description == null) {
+                                    $("#repo").append(`
                                     <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" title="archived" target="_blank"><i class="bi bi-archive"></i><u> ${repo.name}</u></a></li>
                             `);
-                        }
-                        else {
-                            $("#repo").append(`
-                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-toggle="tooltip" data-placement="right" title="${repo.description} (archived)"><i class="bi bi-archive"></i><u> ${repo.name}</u></a></li>
+                                }
+                                else {
+                                    $("#repo").append(`
+                                  <li><a href="${repo.html_url}" style="display: block !important;" class="repo-link" target="_blank" data-bs-toggle="tooltip" data-bs-placement="right" title="${repo.description} (archived)"><i class="bi bi-archive"></i><u> ${repo.name}</u></a></li>
                             `);
+                                }
+                            }
                         }
-                    }
-                    }
-                });
-            },
-            error: (request, status, error) => {
-                $(".repos").html(`<p class="lead text-danger">Error ${request.status}. See console for more info</p>`);
-                console.error(request.responseText);
-            },
-            complete: () => {
-            $('.spinner').hide();
-        }
-        });
-    </script>
-    <script>
-        $(document).ready(() => {
-            $("#year").html(`${new Date().getFullYear()}`);
-        });
-    </script>
+                    });
+                },
+                error: (request, status, error) => {
+                    $(".repos").html(`<p class="lead text-danger">Error ${request.status}. See console for more info</p>`);
+                    console.error(request.responseText);
+                },
+                complete: () => {
+                    $('.spinner').hide();
+                }
+            });
+        </script>
+        <script>
+            $(document).ready(() => {
+                $("#year").html(`${new Date().getFullYear()}`);
+            });
+        </script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZGstcmF3IiwiYSI6ImNrbmhweHUyMzNocDUyeHA5dGRsdnhpemUifQ.ZQJdc-bs9w2OwPDI5aRdHA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                center: [23.7275, 37.9838],
+                zoom: 9.5,
+                style: 'mapbox://styles/dk-raw/cknupgrut122z17p6uviwsbg2'
+            });
+        </script>
 </body>
+
 </html>

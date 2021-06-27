@@ -1,0 +1,25 @@
+body {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+.offcanvas {
+    background-color: #171717;
+}
+.container-sm {
+    margin-top: 4em;
+}
+.spinner {
+    margin-left: 40px;
+}
+.repo-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+.mapboxgl-ctrl {
+    display: none !important;
+}
+#gc {
+    background-color: #171717 !important;
+    border: 2px solid var(--bs-danger);
+    border-radius: 3px !important;
+}

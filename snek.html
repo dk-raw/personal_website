@@ -1,52 +1,98 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <!-- SEO -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Damian's website">
-    <meta name="twitter:description" content="This is my personal website">
-    <meta name="Description" content="Damian's personal website">
-    <meta name="twitter:image" content="Content/512.png">
-    <title>Damian - Snek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Damian's website" />
+    <meta name="twitter:description" content="This is my personal website" />
+    <meta name="Description" content="Damian's personal website" />
+    <meta name="twitter:image" content="Content/512.png" />
+    <title>Play Snek</title>
     <!-- STYLES -->
-    <link rel="icon" type="image/png" href="Content/favicon.ico">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
-    <link href="Content/Site.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="Content/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="Styles/Site.css" />
     <!-- SCRIPTS -->
-    <script src="https://kit.fontawesome.com/4db79696e2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/4db79696e2.js" crossorigin="anonymous"></script>
     <!-- ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4QKE5KRE8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Y4QKE5KRE8');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-Y4QKE5KRE8");
     </script>
 </head>
+
 <body>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item text-warning">$<a href="index.html"><u>Home</u></a></li>
-            <li class="breadcrumb-item current" aria-current="page">Snek</li>
-        </ol>
-    </nav>
-    <div class="container">
-        <h1 class="display-4">Play Snek!</h1>
-        <p class="lead">Use the <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> <i class="far fa-caret-square-left"></i> keys</p>
-        <hr class="bg-danger" />
-        <canvas id="gc" width="400" height="400"></canvas> <br />
-        <button class="btn btn-outline-danger" style="width: 404px;" id="refresh">Restart Game <i class="bi bi-arrow-clockwise"></i></button>
+    <div class="container-sm">
+        <div class="d-inline-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Menu">
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <br />
+        <br />
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Snek</li>
+            </ol>
+        </nav>
+        <div>
+            <h1 class="display-3">Play Snek</h1>
+            <p class="lead">
+                Use the <i class="far fa-caret-square-up"></i> <i class="far fa-caret-square-down"></i> <i class="far fa-caret-square-right"></i> <i class="far fa-caret-square-left"></i> keys
+            </p>
+            <hr class="my-4" />
+            <canvas id="gc" width="400" height="400"></canvas> <br />
+            <button class="btn btn-outline-danger" style="width: 404px;" id="refresh">Restart Game <i class="bi bi-arrow-clockwise"></i></button>
+        </div>
     </div>
-    <script src="Scripts/jquery-3.6.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <a href="index.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-house"></i> Home</a>
+                <a href="about.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-credit-card-2-front"></i> About</a>
+                <a href="contact.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-telephone"></i> Contact</a>
+                <a href="snek.html" class="btn btn-light d-block my-2"><i class="bi bi-joystick"></i> Play Snek</a>
+                <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i> Domains</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        $("#refresh").click(function (e) { 
+                e.preventDefault();
+                location.reload();
+        });
+    </script>
     <script>
         $(document).ready(function () {
             canv = document.getElementById("gc");
@@ -83,7 +129,7 @@
                 if (py > tc - 1) {
                     py = 0;
                 }
-                ctx.fillStyle = "#222222";
+                ctx.fillStyle = "#171717";
                 ctx.fillRect(0, 0, canv.width, canv.height);
                 ctx.fillStyle = "lime";
                 for (var i = 0; i < trail.length; i++) {
@@ -122,14 +168,6 @@
             }
         }
     </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-        $("#refresh").click(function (e) { 
-                e.preventDefault();
-                location.reload();
-            });
-    </script>
 </body>
+
 </html>
