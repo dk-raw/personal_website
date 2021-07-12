@@ -1,3 +1,11 @@
+@font-face {
+    font-family: HelveticaReg;
+    src: url(../assets/Helvetica.ttf);
+}
+@font-face {
+    font-family: HelveticaBold;
+    src: url(../assets/Helvetica-Bold.ttf);
+}
 body {
     background-color: #171717;
     color: #FFFFFF;
@@ -16,10 +24,26 @@ body {
     text-decoration: none !important;
 }
 .mapboxgl-ctrl {
+    /*against tos?*/
     display: none !important;
 }
 #gc {
     background-color: #171717 !important;
     border: 2px solid var(--bs-danger);
     border-radius: 3px !important;
+}
+.breadcrumb a, #concept-corp a {
+    color: #75B6E7;
+    text-decoration: none;
+}
+.breadcrumb a:hover,.breadcrumb a:focus, #concept-corp:hover, #concept-corp:focus {
+    color: #278CDA;
+    text-decoration: underline;
+}
+.helvetica-bold {
+    font-family: HelveticaBold;
+    color: #34568B;
+}
+.helvetica {
+    font-family: HelveticaReg;
 }

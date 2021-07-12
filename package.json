@@ -1,0 +1,23 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "![Perfekt score!](https://user-images.githubusercontent.com/68110106/112374070-5585cc80-8cea-11eb-90e0-673b02090266.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dk-raw/personal_website.git"
+  },
+  "author": "Damian Katsios",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dk-raw/personal_website/issues"
+  },
+  "homepage": "https://github.com/dk-raw/personal_website#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
