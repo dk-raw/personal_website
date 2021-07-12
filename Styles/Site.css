@@ -29,14 +29,14 @@ body {
 }
 #gc {
     background-color: #171717 !important;
-    border: 2px solid var(--bs-danger);
+    border: 2px solid #75B6E7;
     border-radius: 3px !important;
 }
 .breadcrumb a, #concept-corp a {
     color: #75B6E7;
     text-decoration: none;
 }
-.breadcrumb a:hover,.breadcrumb a:focus, #concept-corp:hover, #concept-corp:focus {
+.breadcrumb a:hover,.breadcrumb a:focus,#concept-corp:hover,#concept-corp:focus {
     color: #278CDA;
     text-decoration: underline;
 }
