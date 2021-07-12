@@ -32,11 +32,11 @@ body {
     border: 2px solid #75B6E7;
     border-radius: 3px !important;
 }
-.breadcrumb a, #concept-corp a {
+.breadcrumb a, #concept-corp a,.copyrights a {
     color: #75B6E7;
     text-decoration: none;
 }
-.breadcrumb a:hover,.breadcrumb a:focus,#concept-corp:hover,#concept-corp:focus {
+.breadcrumb a:hover,.breadcrumb a:focus,#concept-corp:hover,#concept-corp:focus,.copyrights a:hover,.copyrights a:focus {
     color: #278CDA;
     text-decoration: underline;
 }
