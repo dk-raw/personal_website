@@ -87,7 +87,7 @@
         </div>
         <div class="offcanvas-body">
             <div>
-                <a href="index.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-house"></i> Home</a>
+                <a href="index.html" class="btn btn-light d-block my-2"><i class="bi bi-house"></i> Home</a>
                 <a href="about.html" class="btn btn-outline-light d-block my-2"><i
                         class="bi bi-credit-card-2-front"></i> About</a>
                 <a href="contact.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-telephone"></i>
@@ -111,13 +111,6 @@
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
-        let aList = document.querySelectorAll('a')
-        for (let i = 0; i < aList.length; i++) {
-            let a = aList[i]
-            if (a.href.indexOf(window.location.pathname.replace('.html', '')) !== -1) {
-                a.classList.add('active')
-            }
-        }
     </script>
 </body>
 
