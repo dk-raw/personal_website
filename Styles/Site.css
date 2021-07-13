@@ -1,49 +1,89 @@
 @font-face {
-    font-family: HelveticaReg;
-    src: url(../assets/Helvetica.ttf);
+  font-family: HelveticaReg;
+  src: url(../assets/Helvetica.ttf);
 }
 @font-face {
-    font-family: HelveticaBold;
-    src: url(../assets/Helvetica-Bold.ttf);
+  font-family: HelveticaBold;
+  src: url(../assets/Helvetica-Bold.ttf);
+}
+::selection {
+  background: white;
+  color: black;
+}
+:root {
+  --mathgray: #23272b;
+  --grey: #888888;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #171717;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*for Firefox based browsers*/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lg-gray) #171717;
 }
 body {
-    background-color: #171717;
-    color: #FFFFFF;
+  background-color: #171717;
+  color: #ffffff;
 }
 .offcanvas {
-    background-color: #171717;
+  background-color: #171717;
 }
 .container-sm {
-    margin-top: 4em;
+  margin-top: 4em;
 }
 .spinner {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 .repo-link {
-    color: white !important;
-    text-decoration: none !important;
+  color: white !important;
+  text-decoration: none !important;
 }
 .mapboxgl-ctrl {
-    /*against tos?*/
-    display: none !important;
+  /*against tos?*/
+  display: none !important;
 }
 #gc {
-    background-color: #171717 !important;
-    border: 2px solid #75B6E7;
-    border-radius: 3px !important;
+  background-color: #171717 !important;
+  border: 2px solid #75b6e7;
+  border-radius: 3px !important;
 }
-.breadcrumb a, #concept-corp a,.copyrights a {
-    color: #75B6E7;
-    text-decoration: none;
+.breadcrumb a,
+#concept-corp a,
+.copyrights a,
+#download a {
+  color: #75b6e7;
+  text-decoration: none;
 }
-.breadcrumb a:hover,.breadcrumb a:focus,#concept-corp:hover,#concept-corp:focus,.copyrights a:hover,.copyrights a:focus {
-    color: #278CDA;
-    text-decoration: underline;
+.breadcrumb a:hover,
+.breadcrumb a:focus,
+#concept-corp:hover,
+#concept-corp:focus,
+.copyrights a:hover,
+.copyrights a:focus,
+#download a:hover,
+#download a:focus {
+  color: #278cda;
+  text-decoration: underline;
 }
 .helvetica-bold {
-    font-family: HelveticaBold;
-    color: #34568B;
+  font-family: HelveticaBold;
+  color: #34568b;
 }
 .helvetica {
-    font-family: HelveticaReg;
+  font-family: HelveticaReg;
+}
+code p {
+  color: #75b6e7 !important;
+  background-color: #1e1e1e !important;
 }

@@ -109,14 +109,14 @@
                 <a href="index.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-house"></i> Home</a>
                 <a href="about.html" class="btn btn-outline-light d-block my-2"><i
                         class="bi bi-credit-card-2-front"></i> About</a>
-                <a href="contact.html" class="btn btn-light d-block my-2"><i class="bi bi-telephone"></i> Contact</a>
+                <a href="contact.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-telephone"></i>
+                    Contact</a>
                 <a href="snek.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-joystick"></i> Play
                     Snek</a>
-                <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i>
-                    Domains</a>
-                <a href="athens-airways/index.html" class="btn btn-outline-light d-block my-2"><i
-                        class="bi bi-wind"></i>
-                    Athens Airways</a>
+                <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i> Domains</a>
+                <a href="pgp.html" class="btn btn-outline-light d-block my-2"><i
+                        class="bi bi-file-earmark-lock2"></i>
+                    PGP</a>
             </div>
             <div class="position-absolute copyrights" style="bottom: 5px">
                 <p>&copy;2021 Damian Katsios - <a href="https://github.com/dk-raw/personal_website" target="_blank" rel="noopener">Source code</a></p>
@@ -129,7 +129,14 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+        });
+        let aList = document.querySelectorAll('a')
+        for (let i = 0; i < aList.length; i++) {
+            let a = aList[i]
+            if (a.href.indexOf(window.location.pathname) !== -1) {
+                a.classList.add('active')
+            }
+        }
     </script>
 </body>
 
