@@ -38,6 +38,7 @@ body {
 }
 .offcanvas {
   background-color: #171717;
+  z-index: 99999999999 !important;
 }
 .container-sm {
   margin-top: 4em;

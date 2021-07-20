@@ -112,6 +112,16 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
     </script>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "https://damians-article-api.herokuapp.com/",
+            dataType: "json",
+            success: (response) => {
+                console.log(response);
+            }
+        });
+    </script>
 </body>
 
 </html>
