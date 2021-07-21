@@ -94,13 +94,14 @@
                     Contact</a>
                 <a href="snek.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-joystick"></i> Play
                     Snek</a>
-                <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i> Domains</a>
-                <a href="pgp.html" class="btn btn-outline-light d-block my-2"><i
-                        class="bi bi-file-earmark-lock2"></i>
+                <a href="domains.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-globe2"></i>
+                    Domains</a>
+                <a href="pgp.html" class="btn btn-outline-light d-block my-2"><i class="bi bi-file-earmark-lock2"></i>
                     PGP</a>
             </div>
             <div class="position-absolute copyrights" style="bottom: 5px">
-                <p>&copy;2021 Damian Katsios - <a href="https://github.com/dk-raw/personal_website" target="_blank" rel="noopener">Source code</a></p>
+                <p>&copy;2021 Damian Katsios - <a href="https://github.com/dk-raw/personal_website" target="_blank"
+                        rel="noopener">Source code</a></p>
             </div>
         </div>
     </div>
@@ -110,16 +111,6 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
-    </script>
-    <script>
-        $.ajax({
-            type: "GET",
-            url: "https://damians-article-api.herokuapp.com/articles",
-            dataType: "json",
-            success: function (response) {
-                console.log(response);
-            }
         });
     </script>
 </body>
