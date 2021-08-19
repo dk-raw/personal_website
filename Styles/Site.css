@@ -56,7 +56,7 @@ body {
 }
 #gc {
   background-color: #171717 !important;
-  border: 2px solid #75b6e7;
+  border: 2px solid #fff;
   border-radius: 3px !important;
 }
 .breadcrumb a,
@@ -87,4 +87,9 @@ body {
 code p {
   color: #75b6e7 !important;
   background-color: #1e1e1e !important;
+}
+
+.bg-dk-dark {
+  background-color: #171717 !important;
+  color: #fff !important;
 }
