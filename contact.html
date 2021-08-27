@@ -59,12 +59,11 @@
             <h1 class="display-3">Contact Me</h1>
             <hr class="my-4" />
             <div>
-                <form class="row g-3 needs-validation mt-4" action="https://postmail.invotes.com/send" method="post"
-                    novalidate>
+                <form class="row g-3 needs-validation mt-4" id="contact-form" novalidate>
                     <div class="row">
                         <div class="col-md">
                             <label for="validationCustom01" class="form-label">Name</label>
-                            <input type="text" class="form-control bg-dk-dark" id="validationCustom01" name="extra_name"
+                            <input type="text" class="form-control bg-dk-dark" id="validationCustom01" name="name"
                                 placeholder="name" required>
                             <div class="valid-feedback">
                                 Looks good!
@@ -75,8 +74,8 @@
                         </div>
                         <div class="col-md">
                             <label for="validationCustom02" class="form-label">Email</label>
-                            <input type="email" class="form-control bg-dk-dark" id="validationCustom02"
-                                name="extra_email" placeholder="email" required>
+                            <input type="email" class="form-control bg-dk-dark" id="validationCustom02" name="email"
+                                placeholder="email" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -88,8 +87,8 @@
                     <div class="row">
                         <div class="col-md">
                             <label for="validationCustom03" class="form-label mt-2">Subject</label>
-                            <input type="text" class="form-control bg-dk-dark" id="validationCustom03"
-                                name="subject" placeholder="subject" required>
+                            <input type="text" class="form-control bg-dk-dark" id="validationCustom03" name="subject"
+                                placeholder="subject" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -111,9 +110,6 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="access_token" value="h0sshvxsvon1cr7y8jo4vstm" />
-                    <input type="hidden" name="success_url" value="/" />
-                    <input type="hidden" name="error_url" value="/" />
                     <div class="row">
                         <div class="col my-4">
                             <button class="btn btn-outline-success" style="margin-right: 0.5em;" type="submit"
@@ -122,40 +118,29 @@
                         </div>
                     </div>
                 </form>
+                <p id="form-result" style="display: none">meow</p>
             </div>
             <hr class="my-4" />
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md mb-4">
                     <h3>GitHub</h3>
                     <a href="https://github.com/dk-raw" target="_blank" class="btn btn-outline-light btn-lg"
                         data-bs-toggle="tooltip" data-bs-placement="bottom" title="@dk-raw"><i class="bi bi-github"></i>
                         GitHub</a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md mb-4">
                     <h3>Email</h3>
-                    <a href="mailto:dkatsios@mathflare.xyz" target="_blank"
-                        class="btn btn-outline-light btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="dkatsios@mathflare.xyz"><i class="bi bi-envelope"></i> Email</a>
+                    <a href="mailto:dkatsios@mathflare.xyz" target="_blank" class="btn btn-outline-light btn-lg"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="dkatsios@mathflare.xyz"><i
+                            class="bi bi-envelope"></i> Email</a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md mb-4">
                     <h3>Twitter</h3>
                     <a href="https://twitter.com/ddkatsios" target="_blank" class="btn btn-outline-light btn-lg"
                         data-bs-toggle="tooltip" data-bs-placement="bottom" title="@ddkatsios"><i
                             class="bi bi-twitter"></i> Twitter</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h3>Discord</h3>
-                    <a href="https://discord.com/invite/VwvQNYzU5M" target="_blank" class="btn btn-outline-light btn-lg"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="@dk.raw#4482"><i
-                            class="bi bi-discord"></i> Discord</a>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h3>Steam</h3>
-                    <a href="https://steamcommunity.com/id/dkraw/" target="_blank" class="btn btn-outline-light btn-lg"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="@dkraw"><i class="fab fa-steam"></i>
-                        Steam</a>
-                </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md mb-4">
                     <h3>YouTube</h3>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
                         class="btn btn-outline-light btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -204,22 +189,8 @@
                 a.classList.add('active')
             }
         }
-        (() => {
-            'use strict'
-            let forms = document.querySelectorAll('.needs-validation')
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
     </script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
