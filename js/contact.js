@@ -1,20 +1,27 @@
 let isValid = false;
+const validateEmail = (email) => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
 (() => {
     'use strict'
-    let forms = document.querySelectorAll('.needs-validation')
+    let forms = document.querySelectorAll('.needs-validation');
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity() || !validateEmail(form.querySelector('[name="email"]').value)) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    isValid = false;
+                    console.log('invalid');
                 } else {
                     isValid = true;
+                    console.log('valid');
                 }
                 form.classList.add('was-validated')
-            }, false)
-        })
-})()
+            }, false);
+        });
+})();
 var form_id = 'contact-form';
 const data_js = {
     "access_token": "h0sshvxsvon1cr7y8jo4vstm"
