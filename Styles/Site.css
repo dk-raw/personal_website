@@ -120,7 +120,8 @@ code p {
   border-color: #75b6e7;
 }
 .btn-outline-damian:hover,
-.btn-outline-damian:focus {
+.btn-outline-damian:focus,
+.btn-outline-damian.active {
   color: #000000;
   background-color: #75b6e7;
 }
