@@ -40,7 +40,7 @@ body {
   text-transform: lowercase;
   padding-left: 0.5em !important;
   padding-right: 0.5em !important;
-  padding-bottom: 0.5em !important;
+  padding-bottom: 3em !important;
 }
 .offcanvas {
   background-color: #171717;
@@ -72,7 +72,7 @@ body {
 }
 #gc {
   background-color: #171717 !important;
-  border: 2px solid #fff;
+  border: 2px solid #75b6e7;
   border-radius: 3px !important;
 }
 .breadcrumb a,
@@ -108,4 +108,24 @@ code p {
 .bg-dk-dark {
   background-color: #171717 !important;
   color: #fff !important;
+}
+
+.btn-outline-damian {
+  color: #75b6e7;
+  border-color: #75b6e7;
+}
+.btn-damian {
+  color: #000000;
+  background-color: #75b6e7;
+  border-color: #75b6e7;
+}
+.btn-outline-damian:hover,
+.btn-outline-damian:focus {
+  color: #000000;
+  background-color: #75b6e7;
+}
+.btn-damian:hover,
+.btn-damian:focus {
+  background-color: #278cda;
+  border-color: #278cda;
 }
