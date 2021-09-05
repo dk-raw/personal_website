@@ -130,3 +130,10 @@ code p {
   background-color: #278cda;
   border-color: #278cda;
 }
+.tooltip > .tooltip-inner {
+  background-color: #75b6e7 !important;
+  color: #000000 !important;
+}
+.tooltip .tooltip-arrow::before {
+  display: none !important;
+}
