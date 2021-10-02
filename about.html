@@ -74,39 +74,37 @@
                 <div class="col-lg">
                     <h2><i class="bi bi-gear"></i> Technologies</h2>
                     <ul>
-                        <li>C#</li>
-                        <li>C++</li>
-                        <li>ASP.NET</li>
-                        <ul>
-                            <li>MVC</li>
-                            <li>Core</li>
-                        </ul>
-                        <li>WebAssembly</li>
+                        <li>.NET</li>
                         <ul>
                             <li>C#</li>
+                            <li>Entity Framework</li>
+                            <li>ASP.NET</li>
+                            <ul>
+                                <li>MVC</li>
+                            </ul>
                         </ul>
+                        <li>C++</li>
                         <li>Blazor</li>
-                        <ul>
-                            <li>Server</li>
-                        </ul>
                         <li>SQL</li>
                         <ul>
-                            <li>Entity Framework</li>
+                            <li>SQL Server</li>
                         </ul>
+                        <li>MongoDB</li>
                         <li>TypeScript</li>
                         <li>JavaScript</li>
                         <ul>
-                            <li>Vanilla</li>
-                            <li>Node.js</li>
                             <li>Express.js</li>
-                            <li>React.js</li>
-                            <li>jQuery</li>
+                            <li>Vue.js</li>
+                            <li>jQuery</li>                            
                         </ul>
                         <li>CSS</li>
                         <ul>
                             <li>Bootstrap 5</li>
                         </ul>
                         <li>HTML</li>
+                        <ul>
+                            <li>EJS</li>
+                        </ul>
                         <li>Visual Studio</li>
                         <ul>
                             <li>2022</li>
@@ -251,12 +249,14 @@
             });
         </script>
         <script>
+            //do not abuse the mapbox api key either!
             mapboxgl.accessToken = 'pk.eyJ1IjoiZGstcmF3IiwiYSI6ImNrbmhweHUyMzNocDUyeHA5dGRsdnhpemUifQ.ZQJdc-bs9w2OwPDI5aRdHA';
             var map = new mapboxgl.Map({
                 container: 'map',
                 center: [23.7275, 37.9838],
                 zoom: 9.5,
                 style: 'mapbox://styles/dk-raw/ckr0tl2b772oa18qvdg78neva'
+                //you can use the map style if you want though
             });
         </script>
 </body>

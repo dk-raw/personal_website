@@ -109,7 +109,10 @@ code p {
   background-color: #171717 !important;
   color: #fff !important;
 }
-
+.bg-damian {
+  background-color: #75b6e7;
+  color: #000000;
+}
 .btn-outline-damian {
   color: #75b6e7;
   border-color: #75b6e7;
