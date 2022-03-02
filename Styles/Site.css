@@ -78,7 +78,8 @@ body {
 .breadcrumb a,
 #concept-corp a,
 .copyrights a,
-#download a {
+#download a,
+.link {
   color: #75b6e7;
   text-decoration: none;
 }
@@ -89,7 +90,9 @@ body {
 .copyrights a:hover,
 .copyrights a:focus,
 #download a:hover,
-#download a:focus {
+#download a:focus,
+.link:hover,
+.link:focus {
   color: #278cda;
   text-decoration: underline;
 }
@@ -103,6 +106,10 @@ body {
 code p {
   color: #75b6e7 !important;
   background-color: #1e1e1e !important;
+}
+
+code {
+  color: #75b6e7 !important;
 }
 
 .bg-dk-dark {
