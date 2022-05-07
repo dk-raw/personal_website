@@ -14,36 +14,26 @@
     <!-- STYLES -->
     <link rel="icon" type="image/png" href="assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <script src="https://kit.fontawesome.com/4db79696e2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Styles/Site.css" />
+    <link rel="stylesheet" href="css/site.css" />
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <!-- ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4QKE5KRE8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-Y4QKE5KRE8");
-    </script>
+
 </head>
 
 <body>
     <div class="container-sm">
         <div class="d-inline-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Menu">
             <button class="btn btn-outline-damian" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu"
-                aria-controls="sideMenu">
+                    aria-controls="sideMenu">
                 <i class="bi bi-list"></i>
             </button>
         </div>
@@ -60,8 +50,8 @@
                 <div class="col-lg">
                     <h1 class="display-4">About Me</h1>
                     <p class="lead">
-                        Hello World! My name is Damian. I am a C# developer residing in Athens. I also like cats and
-                        planes.
+                        Hello World! My name is Damian. I am a C# developer residing in Athens. I also like cats, planes
+                        and military stuff.
                         You were probably expecting this to be a bit longer, but unfortunately,
                         I'm not that interesting as a person.
                     </p>
@@ -145,42 +135,42 @@
             <footer>
                 <hr />
                 <p>&copy;<span id="year"></span> dkatsios.ml - All rights reserved. - Proudly hosted and protected by <i
-                        class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
+                       class="fab fa-cloudflare"></i> Cloudflare and Cloudflare Pages</p>
             </footer>
         </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu" aria-labelledby="menuLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title mx-auto" id="menuLabel">dkatsios.ml Menu</h5>
                 <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
             <div class="offcanvas-body text-center">
                 <div>
                     <a href="../index.html" class="btn btn-outline-damian d-block my-2"><i class="bi bi-house"></i>
                         Home</a>
                     <a href="../about.html" class="btn btn-outline-damian d-block my-2"><i
-                            class="bi bi-credit-card-2-front"></i> About</a>
+                           class="bi bi-credit-card-2-front"></i> About</a>
                     <a href="../contact.html" class="btn btn-outline-damian d-block my-2"><i
-                            class="bi bi-telephone"></i>
+                           class="bi bi-telephone"></i>
                         Contact</a>
                     <a href="../snek.html" class="btn btn-outline-damian d-block my-2"><i class="bi bi-joystick"></i>
                         Play
                         Snek</a>
 
                     <a href="../pgp.html" class="btn btn-outline-damian d-block my-2"><i
-                            class="bi bi-file-earmark-lock2"></i>
+                           class="bi bi-file-earmark-lock2"></i>
                         PGP</a>
                     <a href="../archive.html" class="btn btn-outline-damian d-block my-2"><i class="bi bi-archive"></i>
                         Archive</a>
                 </div>
                 <div class="position-absolute copyrights" style="bottom: 5px">
                     <p>&copy;2021 Damian Katsios - <a href="https://github.com/dk-raw/personal_website" target="_blank"
-                            rel="noopener">Source code</a></p>
+                           rel="noopener">Source code</a></p>
                 </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
